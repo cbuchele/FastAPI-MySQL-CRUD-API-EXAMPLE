@@ -28,11 +28,6 @@ def get_db():
 db_dependency = Annotated[Session, Depends(get_db)]
 
 
-# Initialize Firebase Admin SDK with the service account key JSON file
-cred = credentials.Certificate("./yourfirebasejsokey")
-firebase_admin.initialize_app(cred)
-
-
 # CORS configuration
 origins = [
     "http://localhost",
